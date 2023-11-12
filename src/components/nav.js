@@ -85,7 +85,7 @@ const NavBar = (props) => {
   ];
 
   const debt = [
-    { id: 1, name: "Reservers - 2", chart: ": No data present" },
+    { id: 1, name: "Reservers - imports", chart: ": No data present" },
     { id: 2, name: "Reservers - gold", chart: ": No data present" },
     { id: 3, name: "% GNI", chart: ": No data present" },
     { id: 4, name: "Total Debt", chart: ": No data present" },
@@ -151,6 +151,7 @@ const NavBar = (props) => {
         <div className="nav-main-elements">
           <Link to="/imports">Imports</Link>
         </div>
+       
         {/* <div className="nav-main-elements">
           <Link to="/yield">Yield</Link>
         </div>
@@ -167,9 +168,9 @@ const NavBar = (props) => {
             <Link to="/Sensors">Sensors</Link>
         </div> */}
       </div>
-      <div className="nav-main-elements">
+      {/* <div className="nav-main-elements">
           <Link to="/copilot">Co-Pilot</Link>
-        </div>
+        </div> */}
     </div>
   );
 };

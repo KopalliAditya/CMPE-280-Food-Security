@@ -599,7 +599,7 @@ export default function FoodChartPage(props) {
         <Header />
       </div>
       <div className='row'>
-        <div className='col-md-2' style={{"background-color":"#333"}}><NavBar /></div>
+        <div className='col-md-2' style={{"background-color":"#white"}}><NavBar /></div>
         <div className="col-md-1 vl"></div>
         <div className='col-md-8 main-container'>
           <div className="row">
