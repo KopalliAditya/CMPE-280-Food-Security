@@ -14,23 +14,23 @@ export default function FoodChartPage(props) {
   let [displayVar, setVar] = useState('SAWheat2020');
 
 
-  var SAWheat2020 = [['ReporterCountries', 'PartnerCountries', 'Value'],
-  ['Saudi Arabia', 'Australia', 0],
-  ['Saudi Arabia', 'Brazil', 62460],
-  ['Saudi Arabia', 'Egypt', 0],
-  ['Saudi Arabia', 'Estonia', 0],
-  ['Saudi Arabia', 'France', 0],
-  ['Saudi Arabia', 'Germany', 0],
-  ['Saudi Arabia', 'Latvia', 70100],
-  ['Saudi Arabia', 'Lebanon', 2],
-  ['Saudi Arabia', 'Lithuania', 130500],
-  ['Saudi Arabia', 'Poland', 448613],
-  ['Saudi Arabia', 'Russian Federation', 61700],
-  ['Saudi Arabia', 'Ukraine', 0],
-  ['Saudi Arabia', 'United States of America', 0],
-  ['Saudi Arabia', 'Yemen', 30]
+  var SAWheat2020 = [
+    ['ReporterCountries', 'PartnerCountries', 'Value'],
+    ['Saudi Arabia', 'Australia', 0],
+    ['Saudi Arabia', 'Egypt', 0],
+    ['Saudi Arabia', 'Estonia', 0],
+    ['Saudi Arabia', 'France', 0],
+    ['Saudi Arabia', 'Germany', 0],
+    ['Saudi Arabia', 'Yemen (SA)', 30],
+    ['Saudi Arabia', 'Latvia', 70100],
+    ['Saudi Arabia', 'Lebanon', 2],
+    ['Saudi Arabia', 'Lithuania', 130500],
+    ['Saudi Arabia', 'Brazil', 62460],
+    ['Saudi Arabia', 'Russian Federation', 61700],
+    ['Saudi Arabia', 'Ukraine', 0],
+    ['Saudi Arabia', 'United States of America', 0],
+    ['Saudi Arabia', 'Poland', 448613],
   ];
-
   var SAWheat2019 = [['ReporterCountries', 'PartnerCountries', 'Value'],
   ['Saudi Arabia', 'France', 11],
   ['Saudi Arabia', 'Germany', 139850],
@@ -657,18 +657,8 @@ export default function FoodChartPage(props) {
 
 function CustomCharts(props) {
   return (
-    <div id='chart-area'>
-      <div>
+    <div>
 
-        <Chart
-          width={700}
-          height={'350px'}
-          chartType="Sankey"
-          loader={<div>Loading Chart</div>}
-          data={props.displayChart}
-          rootProps={{ 'data-testid': '1' }}
-        />
-      </div>
       <div>
         <Chart
           chartType="PieChart"
@@ -676,6 +666,17 @@ function CustomCharts(props) {
           width="50%"
           height="400px"
           legendToggle
+        />
+      </div>
+      <div>
+
+        <Chart
+          width={700}
+          height={350}
+          chartType="Sankey"
+          loader={<div>Loading Chart</div>}
+          data={props.displayChart}
+          rootProps={{ 'data-testid': '1' }}
         />
       </div>
 
