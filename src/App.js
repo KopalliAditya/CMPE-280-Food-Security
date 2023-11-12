@@ -10,6 +10,7 @@ import Bananas from "./components/bananas";
 import Walnuts from "./components/walnuts";
 import Mangoes from "./components/mangos";
 import Sensor from "./components/Sensor";
+import Copilot from "./components/CoPilot";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/mangoes" element={<Mangoes />}></Route>
           <Route path="/walnuts" element={<Walnuts />}></Route>
           <Route path="/Sensors" element={<Sensor />}></Route>
+          <Route path="/copilot" element={<Copilot/>}></Route>
         </Routes>
       </BrowserRouter>
     </div>
